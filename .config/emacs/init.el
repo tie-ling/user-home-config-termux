@@ -2,6 +2,7 @@
   :custom
   (auto-fill-function 'do-auto-fill t)
   (calendar-week-start-day 1)
+  (custom-enabled-themes '(modus-operandi) nil nil "Customized with use-package custom")
   (default-input-method "german")
   (enable-local-variables nil)
   (inhibit-startup-screen t)
