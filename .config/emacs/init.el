@@ -66,9 +66,11 @@
 (use-package magit
   :ensure t)
 
+(global-set-key (kbd "C-c a") #'org-agenda)
 (use-package org
   :custom
-  (org-agenda-files nil)
+  (org-agenda-files '("~/user-docs/agenda/2025"))
+  (org-agenda-span 'day)
   (org-display-custom-times t)
   (org-time-stamp-custom-formats '("%m-%d" . "%H:%M"))
   (org-latex-compiler "lualatex")
@@ -103,7 +105,7 @@
     (while (org-at-timestamp-p)
       (forward-char))
     (backward-char 1)
-    (insert "-")
+    (insert "--")
     (org-insert-time-stamp (current-time) t)))
 
 (use-package counsel
