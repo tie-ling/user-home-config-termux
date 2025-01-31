@@ -15,3 +15,18 @@ set -o noclobber
 e () {
     emacsclient --alternate-editor='' --create-frame  "${@}"
 }
+
+gitpullall () {
+    git -C ~ pull
+    git -C ~/user-docs pull
+}
+
+gitstatusall () {
+    git -C ~ status
+    git -C ~/user-docs status
+}
+
+gitpushall () {
+    git -C ~ push
+    git -C ~/user-docs push
+}
