@@ -69,6 +69,7 @@
 (global-set-key (kbd "C-c a") #'org-agenda)
 (use-package org
   :custom
+  (org-startup-folded 'overview)
   (org-agenda-prefix-format
    '((agenda . "%?-12t% s")
      (todo . "")
