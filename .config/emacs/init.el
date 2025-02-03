@@ -69,6 +69,7 @@
 (global-set-key (kbd "C-c a") #'org-agenda)
 (use-package org
   :custom
+  (org-agenda-start-with-log-mode 'clockcheck)
   (org-startup-folded t)
   (org-agenda-prefix-format
    '((agenda . "%?-12t% s")
@@ -104,15 +105,7 @@
            (setq-local electric-pair-inhibit-predicate
                    `(lambda (c)
                   (if (char-equal c ?<) t
-                    (,electric-pair-inhibit-predicate c))))))
-  :config
-  (defun org-my-timestamp-range ()
-    (interactive)
-    (while (org-at-timestamp-p)
-      (forward-char))
-    (backward-char 1)
-    (insert "--")
-    (org-insert-time-stamp (current-time) t)))
+                    (,electric-pair-inhibit-predicate c)))))))
 
 (use-package counsel
   :ensure t
