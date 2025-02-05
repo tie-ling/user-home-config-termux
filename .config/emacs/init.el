@@ -70,9 +70,10 @@
 (use-package org
   :custom
   (org-agenda-start-with-log-mode 'clockcheck)
+  (org-agenda-window-setup 'only-window)
   (org-startup-folded t)
   (org-agenda-prefix-format
-   '((agenda . "%?-12t% s")
+   '((agenda . "%?-12t")
      (todo . "")
      (tags . " %i %-12:c")
      (search . " %i %-12:c")))
