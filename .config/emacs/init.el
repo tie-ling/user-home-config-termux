@@ -69,7 +69,7 @@
 (global-set-key (kbd "C-c a") #'org-agenda)
 (use-package org
   :custom
-  (org-agenda-start-with-log-mode 'clockcheck)
+  (org-agenda-start-with-log-mode nil)
   (org-agenda-window-setup 'only-window)
   (org-startup-folded t)
   (org-agenda-prefix-format
@@ -79,7 +79,7 @@
      (search . " %i %-12:c")))
   (org-agenda-files '("~/user-docs/agenda/2025"))
   (org-agenda-span 'day)
-  (org-display-custom-times t)
+  (org-display-custom-times nil)
   (org-time-stamp-custom-formats '("%m-%d" . "%H:%M"))
   (org-latex-compiler "lualatex")
   (org-babel-load-languages '((haskell . t) (python . t) (emacs-lisp . t) (shell . t)))
