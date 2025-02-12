@@ -78,7 +78,9 @@
      (tags . " %i %-12:c")
      (search . " %i %-12:c")))
   (org-clock-mode-line-total 'current)
-  (org-agenda-files '("~/user-docs/agenda/"))
+  (org-agenda-files '("~/user-docs/org/agenda/logbook/"
+                      "~/user-docs/org/agenda/schedule/"
+                      "~/user-docs/org/agenda/todo/"))
   (org-agenda-span 'day)
   (org-display-custom-times nil)
   (org-time-stamp-custom-formats '("%m-%d" . "%H:%M"))
