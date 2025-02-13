@@ -1,5 +1,3 @@
-(set-default-coding-systems 'utf-8)
-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)

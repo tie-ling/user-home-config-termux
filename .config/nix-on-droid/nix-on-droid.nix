@@ -6,6 +6,9 @@
 }:
 
 {
+  environment.sessionVariables = {
+    LANG = "en_US.UTF-8";
+  };
   android-integration.termux-setup-storage.enable = true;
   # Simply install just the packages
   environment.packages = builtins.attrValues {
