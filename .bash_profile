@@ -1,3 +1,4 @@
+export LANG="en_US.UTF-8"
 # copied directly from NixOS default
 # Provide a nice prompt if the terminal supports it.
 if [ "$TERM" != "dumb" ] || [ -n "$INSIDE_EMACS" ]; then
