@@ -14,7 +14,13 @@
       git
       mc
       tmux
-      coreutils
+      findutils
+      diffutils
+      utillinux
+      man
+      gnutar
+      zip
+      unzip
       ;
     inherit (pkgs.haskellPackages) ghc hledger;
   };
