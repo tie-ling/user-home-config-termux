@@ -4,7 +4,7 @@
   android-integration.termux-setup-storage.enable = true;
   # Simply install just the packages
   environment.packages = builtins.attrValues {
-    inherit (pkgs) emacs-nox git mc nixfmt tmux;
+    inherit (pkgs) emacs-nox git mc tmux;
     inherit (pkgs.haskellPackages) ghc hledger;
 };
 
