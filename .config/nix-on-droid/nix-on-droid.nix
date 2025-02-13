@@ -14,6 +14,7 @@
       git
       mc
       tmux
+      coreutils
       ;
     inherit (pkgs.haskellPackages) ghc hledger;
   };
