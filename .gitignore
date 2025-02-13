@@ -1,7 +1,9 @@
-.lesshst
-storage
-user-docs
+Documents
 *~
-.ssh/id_ed25519
+.termux/colors.properties
 .bash_history
+.cache
 .config
+.local
+.nix*
+.ssh/id_ed25519

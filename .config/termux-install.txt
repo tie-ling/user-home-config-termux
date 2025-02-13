@@ -1,3 +1,0 @@
-Commandline: apt install emacs git openssh
-Commandline: apt install man
-Commandline: apt install x11-repo
