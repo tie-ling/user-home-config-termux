@@ -31,6 +31,8 @@
         epkgs:
         builtins.attrValues {
           inherit (epkgs.treesit-grammars) with-all-grammars;
+          inherit (epkgs) pyim pyim-dict nix-mode notmuch counsel
+            ledger-mode sml-mode haskell-ts-mode magit;
         }
       );
   };

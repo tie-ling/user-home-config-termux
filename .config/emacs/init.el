@@ -1,79 +1,34 @@
-(setq native-comp-jit-compilation nil)
-
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-
 (use-package emacs
   :custom
   (auto-fill-function 'do-auto-fill t)
   (calendar-week-start-day 1)
-  (custom-enabled-themes '(modus-operandi) nil nil "Customized with use-package custom")
-  (default-input-method "pyim")
+  (custom-enabled-themes '(modus-operandi) nil nil)
+  (default-input-method "german-prefix")
+  (display-battery-mode t)
+  (display-time-mode t)
+  (electric-pair-mode t)
   (enable-local-variables nil)
+  (indent-tabs-mode nil)
   (inhibit-startup-screen t)
-  (menu-bar-mode nil)
   (mail-envelope-from 'header)
   (mail-specify-envelope-from t)
-  (message-sendmail-envelope-from 'header)
+  (menu-bar-mode nil)
   (message-default-mail-headers "Reply-To: Yuchen Guo <yc@apvc.uk>")
+  (message-sendmail-envelope-from 'header)
   (mode-line-compact 'long)
   (modus-themes-bold-constructs nil)
   (modus-themes-inhibit-reload nil)
   (modus-themes-italic-constructs t)
   (modus-themes-mixed-fonts t)
   (network-security-level 'paranoid)
-  (read-buffer-completion-ignore-case t)
-  (ring-bell-function nil)
-  (scroll-bar-mode nil)
+  (require-final-newline t)
   (send-mail-function 'sendmail-send-it)
   (sendmail-program "msmtp")
   (tab-always-indent 'complete)
   (tool-bar-mode nil)
-  (tramp-mode nil)
   (user-mail-address "yc@apvc.uk"))
 
-(use-package pyim
-  :ensure t)
-(use-package pyim-basedict
-  :ensure t
-  :config
-  (pyim-basedict-enable))
-
-(use-package elec-pair
-  :custom
-  (electric-pair-mode t))
-
-(use-package time
-  :custom
-  (display-time-mode t))
-
-(use-package shr
-  :custom
-  (shr-cookie-policy nil)
-  (shr-inhibit-images t)
-  (shr-use-colors nil))
-
-(use-package files
-  :custom
-  (require-final-newline t))
-
-(use-package minibuffer
-  :custom
-  (read-file-name-completion-ignore-case t))
-
-(use-package simple
-  :custom
-  (indent-tabs-mode nil))
-
-(use-package nix-mode
-  :ensure t)
-
-(use-package magit
-  :ensure t)
-
 (use-package counsel
-  :ensure t
   :config
   (ivy-mode 1)
   :custom
@@ -81,7 +36,7 @@
   (ivy-count-format "(%d/%d) "))
 
 (use-package ledger-mode
-  :ensure t
+  :defer t
   :custom
   ((ledger-binary-path "hledger")
    (ledger-report-use-strict t)
@@ -92,8 +47,9 @@
    (ledger-report-native-highlighting-arguments '("--color=always")))
   :mode ("\\.hledger\\'" "\\.ledger\\'"))
 
-(global-set-key (kbd "C-c a") #'org-agenda)
 (use-package org
+  :bind
+  (("C-c a" . org-agenda))
   :custom
   (org-agenda-inhibit-startup t)
   (org-agenda-window-setup 'only-window)
@@ -110,12 +66,20 @@
   (org-directory '("~/Documents/org"))
   (org-agenda-span 'day)
   (org-display-custom-times nil)
-  (org-time-stamp-custom-formats '("%m-%d" . "%H:%M")))
-
-
-(use-package text-mode)
-
-
-(use-package haskell-ts-mode
-  :ensure t)
-
+  (org-time-stamp-custom-formats '("%m-%d" . "%H:%M"))
+  (org-latex-compiler "lualatex")
+  (org-export-initial-scope 'buffer)
+  (org-modules
+   '(ol-bbdb ol-bibtex ol-doi ol-eww ol-info ol-irc ol-mhe ol-rmail org-tempo))
+  (org-structure-template-alist
+   '(("a" . "export ascii")
+     ("c" . "center")
+     ("C" . "comment")
+     ("e" . "example")
+     ("E" . "export")
+     ("h" . "export html")
+     ("l" . "export latex")
+     ("q" . "quote")
+     ("s" . "src")
+     ("v" . "verse")
+     ("py" . "src python"))))
