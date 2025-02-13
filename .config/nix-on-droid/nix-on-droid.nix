@@ -10,7 +10,6 @@
   # Simply install just the packages
   environment.packages = builtins.attrValues {
     inherit (pkgs)
-      emacs-nox
       git
       mc
       tmux
@@ -22,7 +21,13 @@
       zip
       unzip
       ;
-    inherit (pkgs.haskellPackages) ghc hledger;
+      inherit (pkgs.haskellPackages) ghc hledger;
+      emacs = (pkgs.emacsPackagesFor pkgs.emacs-nox).emacsWithPackages (
+        epkgs:
+        builtins.attrValues {
+          inherit (epkgs.treesit-grammars) with-all-grammars;
+        }
+      );
   };
 
   terminal.colors = {
