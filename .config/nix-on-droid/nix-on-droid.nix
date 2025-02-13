@@ -11,6 +11,7 @@
   environment.packages = builtins.attrValues {
     inherit (pkgs)
       git
+      openssh
       mc
       tmux
       findutils
