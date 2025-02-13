@@ -110,31 +110,7 @@
   (org-directory '("~/Documents/org"))
   (org-agenda-span 'day)
   (org-display-custom-times nil)
-  (org-time-stamp-custom-formats '("%m-%d" . "%H:%M"))
-  (org-latex-compiler "lualatex")
-  (org-export-initial-scope 'buffer)
-  (org-modules
-   '(ol-bbdb ol-bibtex ol-doi ol-eww ol-info ol-irc ol-mhe ol-rmail org-tempo))
-  (org-structure-template-alist
-   '(("a" . "export ascii")
-     ("c" . "center")
-     ("C" . "comment")
-     ("e" . "example")
-     ("E" . "export")
-     ("h" . "export html")
-     ("l" . "export latex")
-     ("q" . "quote")
-     ("s" . "src")
-     ("v" . "verse")
-     ("py" . "src python")))
-  :hook
-  ;; in org mode, do not use <> electric pairs, as this is used by
-  ;; org-tempo for structure templates
-  (org-mode . (lambda ()
-           (setq-local electric-pair-inhibit-predicate
-                   `(lambda (c)
-                  (if (char-equal c ?<) t
-                    (,electric-pair-inhibit-predicate c)))))))
+  (org-time-stamp-custom-formats '("%m-%d" . "%H:%M")))
 
 
 (use-package text-mode)
