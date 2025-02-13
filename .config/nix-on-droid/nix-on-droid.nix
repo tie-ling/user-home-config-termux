@@ -21,7 +21,7 @@
       gnutar
       zip
       unzip
-      w3m-nox
+      w3m
       ;
       inherit (pkgs.haskellPackages) ghc hledger;
       emacs = (pkgs.emacsPackagesFor pkgs.emacs-nox).emacsWithPackages (
