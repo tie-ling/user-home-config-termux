@@ -1,4 +1,4 @@
-{config, pkgs,  ...}:
+{ config, pkgs, ... }:
 let
   sshdTmpDirectory = "${config.user.home}/.local/sshd-tmp";
   sshdDirectory = "${config.user.home}/.local/sshd";
