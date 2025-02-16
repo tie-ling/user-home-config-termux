@@ -8,3 +8,4 @@ Documents
 .nix*
 .ssh/id_ed25519
 /storage/
+/Projects/

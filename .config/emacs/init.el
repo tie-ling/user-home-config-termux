@@ -60,9 +60,9 @@
      (todo . " %i %-12:c")
      (tags . " %i %-12:c")
      (search . " %i %-12:c")))
-  (org-agenda-files '("~/Documents/org/agenda/logbook/"
-                      "~/Documents/org/agenda/schedule/"
-                      "~/Documents/org/agenda/todo/"))
+  (org-agenda-files '("~/Projects/orgmode/agenda/logbook/"
+                      "~/Projects/orgmode/agenda/schedule/"
+                      "~/Projects/orgmode/agenda/todo/"))
   (org-directory '("~/Documents/org"))
   (org-agenda-span 'day)
   (org-display-custom-times nil)
