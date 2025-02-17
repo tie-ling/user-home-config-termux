@@ -1,5 +1,6 @@
 (use-package emacs
   :custom
+  (xterm-mouse-mode nil)
   (auto-fill-function 'do-auto-fill t)
   (calendar-week-start-day 1)
   (custom-enabled-themes '(modus-operandi) nil nil)
@@ -35,19 +36,6 @@
   :custom
   (ivy-use-virtual-buffers t)
   (ivy-count-format "(%d/%d) "))
-
-(use-package ledger-mode
-  :defer t
-  :ensure t
-  :custom
-  ((ledger-binary-path "hledger")
-   (ledger-report-use-strict t)
-   (ledger-mode-should-check-version nil)
-   (ledger-report-auto-width nil)
-   (ledger-report-links-in-register nil)
-   (ledger-default-date-string "%Y-%m-%d")
-   (ledger-report-native-highlighting-arguments '("--color=always")))
-  :mode ("\\.hledger\\'" "\\.ledger\\'"))
 
 (use-package magit
   :ensure t)
