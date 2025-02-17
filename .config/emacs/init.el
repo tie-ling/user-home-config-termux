@@ -29,6 +29,7 @@
   (user-mail-address "yc@apvc.uk"))
 
 (use-package counsel
+  :ensure t
   :config
   (ivy-mode 1)
   :custom
@@ -37,6 +38,7 @@
 
 (use-package ledger-mode
   :defer t
+  :ensure t
   :custom
   ((ledger-binary-path "hledger")
    (ledger-report-use-strict t)
@@ -46,6 +48,9 @@
    (ledger-default-date-string "%Y-%m-%d")
    (ledger-report-native-highlighting-arguments '("--color=always")))
   :mode ("\\.hledger\\'" "\\.ledger\\'"))
+
+(use-package magit
+  :ensure t)
 
 (use-package org
   :bind
