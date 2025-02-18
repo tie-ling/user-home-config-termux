@@ -1,0 +1,2 @@
+Commandline: apt install git openssh emacs
+Commandline: apt install ledger
