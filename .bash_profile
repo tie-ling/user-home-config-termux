@@ -28,3 +28,4 @@ gitpullall () {
 gitstatusall () {
     find ~ -maxdepth 2 -name '.git' -type d -print0 | xargs --verbose -0I{} git -C {}/.. status
 }
+export LEDGER_FILE=$HOME/Projects/ledger/yc.ledger
