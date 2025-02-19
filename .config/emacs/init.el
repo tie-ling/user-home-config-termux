@@ -7,7 +7,7 @@
   (xterm-mouse-mode nil)
   (auto-fill-function 'do-auto-fill t)
   (calendar-week-start-day 1)
-  (custom-enabled-themes '(modus-operandi) nil nil)
+  (custom-enabled-themes '(modus-vivendi) nil nil)
   (default-input-method "german-prefix")
   (display-battery-mode t)
   (display-time-mode t)
@@ -87,3 +87,15 @@
   ((ledger-report-use-strict t)
    (ledger-default-date-format "%y-%m-%d"))
   :mode ("\\.ledger\\'"))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(ledger-mode magit counsel)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
