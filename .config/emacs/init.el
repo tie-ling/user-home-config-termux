@@ -88,12 +88,6 @@
    (ledger-default-date-format "%y-%m-%d"))
   :mode ("\\.ledger\\'"))
 
-(use-package pyim
-  :ensure t)
-
-(use-package pyim-basedict
-  :ensure t)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
