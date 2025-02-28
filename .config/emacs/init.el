@@ -33,13 +33,10 @@
   (tool-bar-mode nil)
   (user-mail-address "yc@apvc.uk"))
 
-(use-package counsel
+(use-package vertico
   :ensure t
-  :config
-  (ivy-mode 1)
   :custom
-  (ivy-use-virtual-buffers t)
-  (ivy-count-format "(%d/%d) "))
+  (vertico-mode t))
 
 (use-package magit
   :ensure t)
